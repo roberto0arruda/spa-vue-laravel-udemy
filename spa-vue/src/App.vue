@@ -1,23 +1,29 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <router-view/>
+    <header>
+      <AppNavbar></AppNavbar>
+    </header>
+    <main>
+      <router-view/>
+    </main>
+    <AppFooter>
+      <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
+      <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
+      <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
+      <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+    </AppFooter>
   </div>
 </template>
 
 <script>
+import AppNavbar from './components/layouts/NavbarComponent';
+import AppFooter from './components/layouts/FooterComponent';
+
 export default {
   name: 'App',
+  components: {
+    AppNavbar,
+    AppFooter,
+  },
 };
 </script>
-
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>

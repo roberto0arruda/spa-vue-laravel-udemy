@@ -11,6 +11,8 @@
     "build": "node build/build.js"
   },
   "dependencies": {
+    "materialize-css": "^1.0.0-rc.2",
+    "jquery": "^3.5.1",
     "vue": "^2.5.2",
     "vue-router": "^3.0.1"
   },
